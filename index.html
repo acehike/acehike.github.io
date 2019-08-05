@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Paxel Engineering</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://ironsummitmedia.github.io/startbootstrap-scrolling-nav/js/jquery.easing.min.js"></script>
+  <script>
+  //jQuery to collapse the navbar on scroll
+
+
+  //jQuery for page scrolling feature - requires jQuery Easing plugin
+  $(function() {
+      $('a.page-scroll').bind('click', function(event) {
+          var $anchor = $(this);
+          $('html, body').stop().animate({
+              scrollTop: $($anchor.attr('href')).offset().top
+          }, 1200, 'easeInOutExpo');
+          event.preventDefault();
+      });
+  });
+
+
+</script>
+<style>
+body {height: 100%; width: 100%; position: relative;}
+section {height: 75vh; width: 100%; clear:both;}
+.container {width: 662px;}
+.marketing h2, h3 {margin:12px 0 12px 15px;}
+.spacer {padding:70px 0 0 0;}
+.jumbotron {background: #ffffff url("bg.jpg") no-repeat left top; color: #fff;}
+.marketing p + h4 {margin-top: 14px;}
+.marketing, .footer { text-align: justify;}
+.marketing > .row > .col-lg-12 > p {text-align: left; clear:both;}
+.right p, .right h4 {text-align: right;}
+.logo {margin: 10px 0 0 0;}
+#product-2 {padding-top: 50px;}
+#product-2 img {width:auto;}
+#product-3 img {width: 100%; overflow: hidden;}
+#footer {padding: 144px 0 0px 0;}
+.footer {
+      margin: 48px 0 0 0;
+      padding: 19px 0px 19px 0;
+      color: #777;
+      border-top: 1px solid #e5e5e5;
+}
+.grid {margin: 0 0 3px 0; text-align: center;}
+.grid:hover {outline:1px solid #e5e5e5; }
+    /* Customize container */
+    @media (max-width: 768px) {
+      .container {
+        width: 90%;
+      }
+      section {height:auto; border-bottom: 1px solid #e5e5e5;}
+      .grid {width:45%; float:left;}
+      .right h4, .right p { text-align: left;}
+      #product-2 img {width:100% !important; max-width: auto;}
+      .jumbotron { text-align: center;}
+    }
+
+    /* Main marketing message and sign up button */
+    .jumbotron {
+      position: relative;
+      height:400px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .jumbotron .btn {
+      padding: 14px 24px;
+      font-size: 21px;
+    }
+
+
+
+    /* Responsive: Portrait tablets and up */
+    @media screen and (min-width: 768px) {
+      .jumbotron {
+        border-bottom: 0;
+      }
+    }
+
+.navbar-default {
+  background-color: #ffffff;
+  border-color: #e8e8e8;
+}
+.navbar-default .navbar-brand {
+  color: #4c5051;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #3a383c;
+}
+.navbar-default .navbar-text {
+  color: #4c5051;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #4c5051;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #3a383c;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #3a383c;
+  background-color: #e8e8e8;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #3a383c;
+  background-color: #e8e8e8;
+}
+.navbar-default .navbar-toggle {
+  border-color: #e8e8e8;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #e8e8e8;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #4c5051;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #4c5051;
+}
+.navbar-default .navbar-link {
+  color: #4c5051;
+}
+.navbar-default .navbar-link:hover {
+  color: #3a383c;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #4c5051;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #3a383c;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #3a383c;
+    background-color: #e8e8e8;
+  }
+}
+    </style>
+  </head>
+
+  <body data-spy="scroll" data-offset="50" data-target="#bs-example-navbar-collapse-1">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    <a class="page-scroll" href="#top"><img class="logo" src="logo.jpg" alt="Paxel"></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="page-scroll" href="#top">Home</a></li>
+        <li><a class="page-scroll" href="#about">About Us</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Products<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a class="page-scroll" href="#product-1">High Force Tools</a></li>
+            <li><a class="page-scroll" href="#product-2">Fluid Power</a></li>
+            <li><a class="page-scroll" href="#product-3">Fluid Conveying</a></li>
+          </ul>
+        </li>
+        <li><a href="#footer" class="page-scroll">Contact</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div id="top" class="container spacer">
+
+      <section>
+          <div class="jumbotron">
+        <h1>Passion + Excellence</h1>
+        <p class="lead">Paxel Engineering provide sales and services for hydraulic-related products. </p>
+        <p><a class="btn btn-lg btn-success page-scroll" href="#about" role="button">Find out more</a></p>
+      </div>
+    </section>
+
+      <section id="about" class="marketing">
+          <h1>About Us</h1>
+          <div class="row">
+          <div class="col-lg-12">
+          <p>We specialise in providing the following services: fluiding conveying, high force tools and fluid power</p>
+        </div>
+        <div class="col-lg-6">
+          <h4> iHP Tool</h4>
+          <p>The brand was set up in 1995. Our experience in the industries stretched way back to the early 70s. Our main business is to source and supply industrial equipments to the construction, shipbuilding, oil explorations, mining,
+            manufacturing and general industries.</p>
+
+<p>iHP Tools products have gained the trust and confidence of our valued customers, to provide more than just comprehensive and reliable equipments. We hold the highest aspect for SAFETY to our valued customers.</p>
+        </div>
+
+        <div class="col-lg-6">
+
+          <h4>Brevini</h4>
+          <p>Brevini Fluid Power is a leading manufacturer of hydraulic components in Italy and Europe. The headquarters are in Reggio Emilia, with direct subsidiaries in Europe, China, India, Singapore and USA. This network ensures a global presence of our seven product lines</p>
+        </div>
+        </div>
+      </section>
+
+
+      <!-- products-->
+
+
+          <section id="product-1" class="marketing">
+              <h1>Product</h1>
+
+                  <div class="row">
+    <h3>High Force Tool</h3>
+
+            <div class="col-lg-12">
+
+              <p> <h4>Cylinder</h4>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/SGT.htm"><img src="http://paxel.sg/products/SGT.gif"></a><p>SGT Single Action</p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/SFJ.htm"><img src="http://paxel.sg/products/SFJ.gif"> </a><p>SFJ/SLC Low height</p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/SHC.htm"><img src="http://paxel.sg/products/SHC.gif"> </a><p>SHC Hollow Plunger</p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/DPC.htm"><img src="http://paxel.sg/products/DPC.gif"></a> <p>DPC Double Action</p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/DHC.htm"><img src="http://paxel.sg/products/DHC.gif"></a> <p>DHC Double Acting Hollow Plunger</p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/DCC.htm"><img src="http://paxel.sg/products/DCC.gif"> </a><p>DCC Double Acting High Tonnage</p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/SCC.htm"><img src="http://paxel.sg/products/SCC.gif"> </a><p>SCC Single Action High Tonnage</p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/SLL.htm"><img src="http://paxel.sg/products/SLL.gif"></a> <p>SLL High Tonnage, Locknut</p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/SCP.htm"><img src="http://paxel.sg/products/SCP.gif"></a> <p>SCP Pancake Locknut</p></div>
+              </p>
+
+
+
+              <p> <h4>Pump</h4>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/PA.htm"><img src="http://paxel.sg/products/HAND.gif"> </a><p>SCC Single Action High Tonnage</p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://paxel.sg/products/electric_pump.jpeg"><img src="http://paxel.sg/products/BATTERY.gif"></a> <p>SLL High Tonnage, Locknut</p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/ASS.htm"><img src="http://paxel.sg/products/ASS.gif"></a> <p>SCP Pancake Locknut</p></div>
+              </p>
+              <p> <h4>Pusher</h4>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/puller-1.htm"><img src="http://paxel.sg/products/puller-1.gif"> </a><p>SCC Single Action High Tonnage</p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/puller-2.htm"><img src="http://paxel.sg/products/puller-2.gif"></a> <p>SLL High Tonnage, Locknut</p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/puller-3.htm"><img src="http://paxel.sg/products/puller-3.gif"></a> <p>SCP Pancake Locknut</p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/puller-4.htm"><img src="http://paxel.sg/products/puller-4.gif"> </a><p>SCC Single Action High Tonnage</p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/puller-5.htm"><img src="http://paxel.sg/products/puller-5.gif"></a> <p>SLL High Tonnage, Locknut</p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/puller-6.htm"><img src="http://paxel.sg/products/puller-6.gif"></a> <p>SCP Pancake Locknut</p></div>
+              </p>
+              <p> <h4>Pusher</h4>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/mxta.htm"><img src="http://ihp-tools.com/images/mxta.h1.jpg"> </a><p>SCC Single Action High Tonnage</p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/xlct.htm"><img src="http://ihp-tools.com/images/wrench2.jpg"></a> <p>SLL High Tonnage, Locknut</p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/twpe.htm"><img src="http://ihp-tools.com/images/Electric%20Pump%20copy.gif"></a> <p>SCP Pancake Locknut</p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/twin-h.htm"><img src="http://ihp-tools.com/images/200852601855.jpg"> </a><p>SCC Single Action High Tonnage</p></div>
+              </p>
+            </div>
+          </div>
+
+          <div id="product-2" class="row">
+            <h3>Fluid Power</h3>
+            <div class="col-sm-4 right"><h4>CETOP Valve</h4>
+            <p>Flow from 20l/min to 600l/min and pressure from 250 bar to 320 bar</p>
+            </div>
+            <div class="col-sm-8"><img class="thumbnail" src="http://paxel.sg/products/cetop.jpg"></div>
+            <div class="col-sm-4 right"><h4>Axial Piston Pump</h4>
+            <p>Pumps range from 6cc to 226cc for maximum pressure<br /> of up to 480 bar
+Suitable for mobile and industrial applications with swashplate and bent axis design</p>
+            </div>
+            <div class="col-sm-8"><img class="thumbnail" src="http://paxel.sg/products/pistonpump.jpg"></div>
+            <div class="col-sm-4 right"><h4>Orbit Motor</h4>
+            <p>Flow from 13cc to 400cc Speed from 153rpm to 1550rpm Torque from 94Nm to 1600Nm</p>
+            </div>
+            <div class="col-sm-8"><img class="thumbnail" src="http://paxel.sg/products/orbitalmotor.jpg"></div>
+            <div class="col-sm-4 right"><h4>Proportional Valve</h4>
+            <p>With inlet flow rate up to 380l/minute and maximum pressure of 400 bar</p>
+            </div>
+            <div class="col-sm-8"><img class="thumbnail" src="http://paxel.sg/products/proportion-valve.jpg"></div>
+            <div class="col-sm-4 right"><h4>Gear Pump</h4>
+            <p>Group 1: from 0,70 to 9,9 cc/rev
+Group 2: from 4,10 to 30 cc/rev
+Group 3: from 22 to 60 cc/rev</p>
+            </div>
+            <div class="col-sm-8"><img class="thumbnail" src="http://paxel.sg/products/gearpump.jpeg"></div>
+
+  </div>
+
+  <div id="product-3" class="row">
+    <h3>Fluid Conveying</h3>
+    <div class="col-sm-4 col-xs-6">
+      <h4>Hydraulic Hoses</h4>
+        <img class="thumbnail" src="http://paxel.sg/products/hose.jpg">
+    <p>Flow from 20l/min to 600l/min and pressure from 250 bar to 320 bar</p>
+    </div>
+    <div class="col-sm-4 col-xs-6">
+      <h4>Fitting</h4>
+        <img class="thumbnail" src="http://paxel.sg/products/fitting.jpg">
+    <p>Flow from 20l/min to 600l/min and pressure from 250 bar to 320 bar</p>
+    </div>
+    <div class="col-sm-4 col-xs-6">
+      <h4>Adapter</h4>
+        <img class="thumbnail" src="http://paxel.sg/products/adapter.jpg">
+    <p>Pipe, Tube and Lok Type Steel & Stainless Steel</p>
+    </div>
+</div>
+
+          </section>
+<section id="footer" class="marketing">
+
+  <h1>Contact Us</h1>
+  <div class="row">
+
+<div class="col-xs-6">
+  <p>Paxel Engineering Pte Ltd<br />
+  545 Orchard Road #03-35<br />
+  Far East Shopping Centre<br />
+  Singapore 238882<br />
+  </p>
+
+</div>
+
+<div class="col-xs-6">
+
+  <p>For enquiry and quotation<br />
+   Tel: +65 63560878<br />
+    Fax: +65 67585990<br />
+  Email: john@paxel.sg</p>
+</div>
+</div>
+<p class="footer">&copy;2015 Paxel Engineering Pte Ltd</p>
+</section>
+
+</div>
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
