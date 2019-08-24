@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://www.hydroline.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Hydroline Products Pvt Ltd</title>
+
+<meta name="description" content="Moving Boxes Menu with jQuery">
+<meta name="keywords" content="jquery, boxes, menu, rotating, content, background image, full page">
+<link rel="shortcut icon" href="http://www.hydroline.com/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="./Hydroline Products Pvt Ltd_files/style.css">
+<link href="./Hydroline Products Pvt Ltd_files/css" rel="stylesheet" type="text/css">
+<link href="./Hydroline Products Pvt Ltd_files/css(1)" rel="stylesheet" type="text/css">
+<link type="text/css" href="./Hydroline Products Pvt Ltd_files/jquery.jscrollpane.css" rel="stylesheet" media="all">
+<script type="text/javascript" src="./Hydroline Products Pvt Ltd_files/jquery-1.4.min.js.download"></script>
+<script type="text/javascript">
+
+   function closefn()
+   {
+	   $("#background").fadeOut("slow");
+			$("#large").fadeOut("slow");
+   }
+	$(document).ready(function() {		
+		jQuery.fn.center = function () {
+		this.css("position","absolute");
+		this.css("top", ( $(window).height() - this.height() ) / 5+$(window).scrollTop() + "px");
+		this.css("left", ( $(window).width() - this.width() ) / 1.2+$(window).scrollLeft() + "px");
+		return this;
+	}
+		$('#thumbnail a').click(function(e){
+			$("#background").css({"opacity" : "0.7"})			
+							.fadeIn("slow");						
+	$("#large").html("<a href=# style='float:left;color:red;font-weight:bold;font-size:14px;cursor:default; padding-left:135px;'>" + $(this).find('img').attr('title') + "</a><a href='#' onclick='closefn();' style='float:right;color:black; font-size:15px;'><img src='images/close.png' style='background-repeat:no-repeat;border:0;border-radius:0px;'/></a><br/><img src='"+$(this).attr('href')+"'/><br/><a href='" +$(this).find('img').attr('rel')+"' target='_blank' style='color:red; margin-left:10px; font-size:12px;' >"+$(this).find('img').attr('alt')+" </a>")
+					   .center()
+					   .fadeIn("slow");			
+			
+			return false;
+		});
+			
+		$(document).keypress(function(e){
+			if(e.keyCode==27){
+				$("#background").fadeOut("slow");
+				$("#large").fadeOut("slow");
+			}
+		});
+		
+		$("#background").hover(function(){
+			$("#background").fadeOut("slow");
+			$("#large").fadeOut("slow");
+		});
+	});
+</script>
+<script type="text/javascript">
+    $(function(){
+		clearfields();
+	});
+	function clearfields()
+	{
+		 $("input[type=text]").val('');
+		 $("#ccomment").val('');
+	}
+</script>
+<script type="text/javascript">
+        function validateForm()
+		{
+		 var regexp1=new RegExp("[^0-9]");
+	     var reEmail = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+	    if($("#name").val() == "" || $("#comp").val() == "" || $("#address").val() == "" || $("#country").val() == "" || $("#city").val() == "" || $("#zip").val() == "")
+		{		
+		  alert("All Fields Are Required");
+		   return false;		   
+		}
+	     if($("#cemail").val() == "")
+		{
+		    alert("All Fields Are Required");
+			return false;			
+		}
+		else if(!$("#cemail").val().match(reEmail))
+		{
+		   alert("Invalid Email");
+		   return false;
+		}	
+	    if($("#teleph").val() == "")
+		{
+		    alert("All Fields Are Required");
+			return false;
+		}
+		 else if(regexp1.test($("#teleph").val())){
+		     alert("Tele Phone Country Code Contains Only Digits");
+			return false;
+		 }
+		 if($("#phone").val() == "")
+		{
+		    alert("All Fields Are Required");
+			return false;
+		}
+		else if(regexp1.test($("#phone").val())){
+		     alert("Tele Phone Area Code Contains Only Digits");
+			return false;
+		 }
+		  if($("#tele").val() == "")
+		{
+		    alert("All Fields Are Required");
+			return false;
+		}
+		else if(regexp1.test($("#tele").val())){
+		     alert("Tele Phone No Contains Only Digits");
+			return false;
+		 }
+		 if($("#mobile").val() == "")
+		{
+		    alert("All Fields Are Required");
+			return false;
+		}
+		 else if(regexp1.test($("#mobile").val())){
+		     alert("Mobile Country Code Contains Only Digits");
+			return false;
+		 }
+		 /*if($("#mobile1").val() == "")
+		{
+		    alert("All Fields Are Required");
+			return false;
+		}
+		else if(regexp1.test($("#mobile1").val())){
+		     alert("Mobile Area Code Contains Only Digits");
+			return false;
+		 }*/
+		  if($("#mobile2").val() == "")
+		{
+		    alert("All Fields Are Required");
+			return false;
+		}
+		else if(regexp1.test($("#mobile2").val())){
+		     alert("Mobile No Contains Only Digits");
+			return false;
+		 }
+		 
+		if($("#captcha").val() == "")
+		{
+		    alert("All Fields Are Required");
+			return false;
+		}
+		if($("#ccomment").val() == "")
+		{
+		    alert("All Fields Are Required");
+			return false;
+		}
+	   } 
+</script>
+<!--<script type="text/javascript">
+$(function () {
+$('#menu li').hover(
+function () {
+$('.sub_menu', this).stop(true, true).slideDown(); /*slideDown the subitems on mouseover*/
+}, function () {
+$('.sub_menu', this).stop(true, true).slideUp();
+  /*slideUp the subitems on mouseout*/
+});
+});
+</script>-->
+<style type="text/css">
+img {
+	border: 1px solid blue;
+	border-radius:8px;
+}
+#thumbnail img {
+	cursor: pointer;
+}
+#large {
+	display: none;
+	position: absolute;
+	padding: 5px;
+	z-index: 10;
+	min-height: auto;
+	min-width: auto;
+	color: #000;
+	background-color: #FFF;
+	border: #F00;
+	border-radius:15px;
+	top:150px;
+}
+#background {
+	display: none;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: #000000;
+	z-index: 1;
+}
+ul#menu {
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 450px;
+	list-style: none;
+	position: relative;
+	font-size: 1.2em;/*	background:url(images/topnav_s.gif) repeat-x;
+*/
+}
+ul#menu li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	border-right: 1px solid #555;
+}
+ul#menu li a {
+	padding:5px 4px;
+	display: block;
+	color: #000;
+	text-decoration: none;
+}
+ul#menu li:hover {
+background: #1376c9 url (images/topnav_a.gif) repeat-x;
+	text-decoration:underline;
+}
+ul#menu li span {
+	float: left;
+	padding: 1px 0;
+	position: absolute;
+	left: 0;
+	top:33.3px;
+	display: none;
+	width: 795px;
+	/*	background: #000;
+*/	color: #fff;
+	-moz-border-radius-bottomright: 5px;
+	-khtml-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-khtml-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+}
+ul#menu li:hover span {
+	display: block;/*	border-right: 1px solid #555;
+*/
+}
+ul#menu li span a {
+	display: inline;
+}
+ul#menu li span a:hover {
+	text-decoration: underline;
+}
+#newbutton
+{
+   
+    
+    display: block;
+    float: left;
+    position: relative;
+    height: 30px;
+    width: 172px;
+    margin: 0 10px 18px 0;
+    
+    text-decoration: none;
+    font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*font-weight: bold;*/
+    line-height: 25px;
+    text-align: center;
+    
+    -webkit-border-radius: 3px; 
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+a.blue,
+  a.blue:hover,
+  a.blue:visited {
+    color: #ffffff;/*#42788e;*/
+    border-bottom: 4px solid #589cb6;
+    background: #2f73b6;
+    
+    text-shadow: 0px 1px 0px #bee9fa;
+    background: -webkit-gradient(linear, left top, left bottom, from(#abe4f8), to(#74d0f4));
+    background: -moz-linear-gradient(top,  #2f73b6,  #74d0f4);
+    
+    box-shadow: inset 1px 1px 0 #b2e6f8;
+  }
+
+  .blue:before,
+  .blue:after {
+    border: 1px solid #8cc5d9;
+    border-bottom: 1px solid #4e8aa1;
+  }
+
+  a.blue:hover {
+    background: #74d0f4;
+    background: -webkit-gradient(linear, left top, left bottom, from(#74d0f4), to(#2f73b6));
+    background: -moz-linear-gradient(top,  #74d0f4,  #2f73b6);
+  }
+</style>
+<script type="text/javascript" src="./Hydroline Products Pvt Ltd_files/jquery.js.download"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+$("ul#menu li").hover(function() { //Hover over event on list item
+	//$(this).css({ 'background' : '#1376c9 url(topnav_active.gif) repeat-x'}); //Add background color + image on hovered list item
+	$(this).find("span").show(); //Show the subnav
+} , function() { //on hover out...
+	$(this).css({ 'background' : 'none'}); //Ditch the background
+	$(this).find("span").hide(); //Hide the subnav
+});
+	
+});
+</script>
+</head>
+<body>
+<div id="mb_background" class="mb_background"> <img src="./Hydroline Products Pvt Ltd_files/bg.jpg" alt="" height="594" border="none" class="mb_bgimage">
+  <div class="mb_overlay"></div>
+  <div class="mb_loading"></div>
+</div>
+<div id="mb_pattern" class="mb_pattern"><div data-transform="rotate(39deg)" class="ui-draggable" style="opacity: 0.1; top: 21px; left: 131px; transform: rotate(39deg); width: 50px; height: 50px; display: block;"></div><div data-transform="rotate(-50deg)" class="ui-draggable" style="opacity: 0.1; top: 193px; left: 580px; transform: rotate(-50deg); width: 50px; height: 50px; display: block;"></div></div>
+<div id="mb_menu" class="mb_menu">
+  <div class="menu" style="font:Arial; font-size:14px;">
+    <ul id="menu">
+      <li><a href="http://www.hydroline.com/index.html" data-speed="10" data-easing="easeOutExpo">Home</a></li>
+      <li style="background: none;"> <a href="http://www.hydroline.com/#" data-speed="10" data-easing="easeOutExpo">About Us</a> </li>
+      <li style="background: none;"> <a href="http://www.hydroline.com/#">Products</a>
+        <ul>
+          <span style="display: none;">
+          <li><a href="http://www.hydroline.com/#" data-speed="10" data-easing="easeOutExpo">Filter</a></li>
+          <li style="background: none;"><a href="http://www.hydroline.com/#" data-speed="10" data-easing="easeOutExpo">Filter with Breather</a></li>
+          <li style="background: none;"><a href="http://www.hydroline.com/#" data-speed="10" data-easing="easeOutExpo">Breather</a></li>
+          <li style="background: none;"><a href="http://www.hydroline.com/#" data-speed="10" data-easing="easeOutExpo">Strainer</a></li>
+          <li style="background: none;"><a href="http://www.hydroline.com/#" data-speed="10" data-easing="easeOutExpo">Accessories</a></li>
+          <li style="background: none;"><a href="http://www.hydroline.com/#" data-speed="10" data-easing="easeOutExpo">Level Gauge</a></li>
+          <li><a href="http://www.hydroline.com/#" data-speed="10" data-easing="easeOutExpo">Valves</a></li>
+          <li><a href="http://www.hydroline.com/#" data-speed="10" data-easing="easeOutExpo">Custom</a></li>
+          </span>
+        </ul>
+      </li>
+      <li style="background: none;"><a href="http://www.hydroline.com/#" data-speed="10" data-easing="easeOutExpo">Contact Us</a></li>
+    </ul>
+  </div>
+</div>
+<div style="padding-left:100px;" class="mb_menu1">
+  <a href="http://www.hydroline.com/pdf/LG7Cat-130417.pdf" class="blue" target="_blank" id="newbutton">New</a><!-- LG7Cat-120417.pdf -->
+</div>
+<div id="mb_content_wrapper" class="mb_content_wrapper" style="display: none;"> <span class="mb_close"></span>
+  <div class="mb_content" style="display: none;">
+    <h2>Home</h2>
+    <div class="mb_content_inner" style="overflow: hidden; padding: 0px; width: 537px;"> <div class="jspContainer" style="width: 537px; height: 400px;"><div class="jspPane" style="padding: 0px; top: 0px; width: 537px;"></div></div></div>
+  </div>
+  <div class="mb_content" style="display: none;">
+    <h2>About Us</h2>
+    <br>
+    <div class="mb_content_inner" style="overflow: hidden; padding: 0px; width: 537px;">
+      
+      
+      
+      
+      
+      
+    <div class="jspContainer" style="width: 537px; height: 400px;"><div class="jspPane" style="padding: 0px; top: 0px; width: 537px;"><div id="thumbnail" class="mb_close"> </div><p align="justify" style="margin:4px"> HYDROLINE PRODUCTS commenced operations in 1982 in Bangalore , India to manufacture Oil Hydraulic Filters and Tank / Reservoir Accessories aimed at international interchangeability for mounting interface and reliability, for Industrial &amp; Mobile applications.</p><p align="justify" style="margin:4px">Our goal is to help our OEMs / Customers and Distributors succeed with the best products engineered to add value and reliability.We consider our network of Distributors as an extension of our marketing arm and fully support their quest / activity for wider reach. We aim to be a strong player in the domestic market and a meaningful global player in our core products.Currently we export to all six continents.</p><p align="justify" style="margin:4px">We believe in taking up challenges to offer custom engineered products. We work closely to understand the needs of customers and provide solutions tailor made to their specific requirements.</p><p align="justify" style="margin:4px">We will continue to add new innovative products to our range. We endeavour to continually improve processes / products &amp; technology with the objective of providing our customers with value added products and services. We are in for the long haul.</p><p align="justify">We are certified to ISO:9001-2008</p></div></div></div>
+  </div>
+  <div class="mb_content" style="display: none;">
+    <h2 style="font-size:16px">About Us</h2>
+    <div class="mb_content_inner" style="overflow: hidden; padding: 0px; width: 537px;"> <div class="jspContainer" style="width: 537px; height: 400px;"><div class="jspPane" style="padding: 0px; top: 0px; width: 537px;"></div></div></div>
+  </div>
+  <div class="mb_content" style="padding-left: 28px; display: none;">
+  
+    <h2>Contact Us</h2>
+    
+ 
+    <div class="mb_content_inner" style="overflow: hidden; padding: 0px; width: 537px;">
+      
+    <div class="jspContainer" style="width: 537px; height: 400px;"><div class="jspPane" style="padding: 0px; top: 0px; width: 537px;"><form id="contactform" name="contactform" method="POST" action="http://www.hydroline.com/contact.php" onsubmit="return validateForm();">
+       <fieldset> <div>
+          <div id="leftcontct" style="float:left; display:inline;">  <label style="font-size:12px;" for="name">Name:</label><span class="error">*</span>
+            <div>
+              <input id="name" name="name" type="text" class="required" style="width:225px; height:13px;border:1px solid blue;border-radius:4px;">
+            </div>
+            <label style="font-size:12px;" for="comp">Company:</label><span class="error">*</span>
+            <div>
+              <input id="comp" name="comp" type="text" class="required" style="width:225px; height:13px;border:1px solid blue;border-radius:4px;">
+            </div>
+            <label for="address" style="font-size:12px;">Address:</label><span class="error">*</span>
+            <div>
+              <input id="address" name="address" type="text" class="required address" style="width:225px; height:13px;border:1px solid blue;border-radius:4px;">
+            </div>
+            <label for="city" style="font-size:12px;">City:</label><span class="error">*</span>
+            <div>
+              <input id="city" name="city" type="text" class="required" style="width:225px; height:13px;border:1px solid blue;border-radius:4px;">
+            </div>
+            <label for="country" style="font-size:12px;">
+            Country<span class="error">*</span>
+            <label for="zip" style="padding-left:90px">Zip / Pin code<span class="error">*</span></label>
+            </label>
+            <div>
+              <input id="country" name="country" type="text" class="required" style="width:125px; height:13px;border:1px solid blue;border-radius:4px;">
+              <input id="zip" name="zip" type="text" class="required" style="width:100px; height:13px;border:1px solid blue;border-radius:4px;">
+            </div>
+          </div>
+          <div id="rightcontct" style="float:right; display:inline; margin-right: 40px;">
+            <label style="font-size:12px;" for="cemail">E-mail:</label><span class="error">*</span>
+            <div>
+              <input id="cemail" name="email" type="text" class="required email" style="width:225px; height:13px;border:1px solid blue;border-radius:4px;">
+            </div>
+            <label for="teleph" style="font-size:12px;">Tel : Country code<span class="error">*</span> / Area code <span class="error">*</span>/ Tel No<span class="error">*</span></label>
+            <div>
+              <input id="teleph" name="teleph" type="text" class="required" style="width:63px; height:13px;border:1px solid blue;border-radius:4px;">
+              <input id="phone" name="phone" type="text" class="required" style="width:63px; height:13px;border:1px solid blue;border-radius:4px;">
+              <input type="text" class="required" id="tele" name="tele" style="width:85px; height:13px;border:1px solid blue;border-radius:4px;">
+            </div>
+            <label for="mobile" style="font-size:12px;">Mobile:Country code<span class="error">*</span>/ Tel No<span class="error">*</span></label>
+            <div>
+              <input id="mobile" name="mobile" type="text" class="required" style="width:100px; height:13px;border:1px solid blue;border-radius:4px;">
+              
+              <input type="text" class="required" id="mobile2" name="mobile2" style="width:118px; height:13px;border:1px solid blue;border-radius:4px;">
+            </div>
+            <label for="cemail" style="font-size:12px;">Enter Code:</label><span class="error">*</span>
+            <div>
+              <input id="captcha" type="text" name="txtCaptcha" class="required" style="width:225px; height:13px;border:1px solid blue;border-radius:4px;">
+            </div>
+            <div> <img src="./Hydroline Products Pvt Ltd_files/random.php" alt="CAPTCHA image" align="top"> <span style="color:#F00; font-size:14px"></span> </div>
+          </div>
+          <div style="float:right; margin-right:41px">
+            <input id="button" name="submit" type="submit" value="Submit" width="75" style="border:1px solid blue;">
+            <input id="button" type="reset" value="Reset" width="75" style="border:1px solid blue;">
+          </div>
+          <div id="rightcontct" style="float:left; display:inline; margin-left:4px;">
+            <label style="font-size:12px;" for="message">Message:</label><span class="error">*</span>
+            <div>
+              <textarea id="ccomment" name="comment" cols="15" class="required" rows="30" style="width:500px; height:70px;border:1px solid blue;border-radius:8px;"></textarea>
+            </div>
+          </div>
+        </div></fieldset>
+      </form></div></div></div>
+  </div>
+  <div class="mb_content" style="display: none;">
+    <h2>Filters &nbsp;&nbsp;&nbsp;&nbsp;(Please click on the image.)</h2>
+    <div class="mb_content_inner" style="overflow: hidden; padding: 0px; width: 537px;">
+      
+    <div class="jspContainer" style="width: 537px; height: 400px;"><div class="jspPane" style="padding: 0px; top: 0px; width: 537px;"><div id="thumbnail" class="mb_close"> <a href="http://www.hydroline.com/images/filters/IFR2.jpg"><img src="./Hydroline Products Pvt Ltd_files/IFR2.jpg" vspace="10px" rel="pdf/IFR2 - 030413.pdf" alt="In-line -Spin On - Click Here To View Detail" hspace="3px" height="88" width="88" title="IFR2"></a> <a href="http://www.hydroline.com/images/filters/IFR3.jpg"><img src="./Hydroline Products Pvt Ltd_files/IFR3.jpg" vspace="10px" rel="pdf/IFR3 -030413.pdf" alt="In-line -Spin On - Click Here To View Detail" hspace="3px" height="88" width="88" title="IFR3"></a> <a href="http://www.hydroline.com/images/filters/SE.jpg"><img src="./Hydroline Products Pvt Ltd_files/SE.jpg" vspace="10px" rel="pdf/IFR4 - 030413.pdf" alt="In-line -Spin On - Click Here To View Detail" hspace="3px" height="88" width="88" title="IFR4"></a> <a id="image" href="http://www.hydroline.com/images/filters/TFR3.jpg"><img src="./Hydroline Products Pvt Ltd_files/TFR3.jpg" vspace="10px" rel="pdf/TFR3 - 030413.pdf" alt="Tank Top - Spin On - Click Here To View Detail " hspace="3px" height="88" width="88" title="TFR3"></a><br>
+        <a href="http://www.hydroline.com/images/filters/TIF2.jpg"><img src="./Hydroline Products Pvt Ltd_files/TIF2.jpg" vspace="10px" rel="pdf/TIF2 - 030413.pdf" alt="Tank Top - Cartridge  - Click Here To View Detail" hspace="3px" height="88" width="88" title="TIF2"></a> <a href="http://www.hydroline.com/images/filters/FIF.jpg"><img src="./Hydroline Products Pvt Ltd_files/FIF.jpg" vspace="10px" rel="pdf/FIF-030413.pdf" alt="Tank Top -Cartridge - Click Here To View Detail" hspace="3px" height="88" width="88" title="FIF"></a> <a href="http://www.hydroline.com/images/filters/CFR.jpg"><img src="./Hydroline Products Pvt Ltd_files/CFR.jpg" rel="pdf/CFR - 030413.pdf" alt="Tank Top - Heavy Duty  - Click Here To View Detail" hspace="3px" vspace="10PX" height="88" width="88" title="CFR"></a> <a href="http://www.hydroline.com/images/filters/HFR.jpg"><img src="./Hydroline Products Pvt Ltd_files/HFR.jpg" vspace="10px" rel="pdf/HFR - 030413.pdf" alt="In-line -Heavy Duty - Click Here To View Details" hspace="3px" height="88" width="88" title="HFR"></a> <a href="http://www.hydroline.com/images/filters/KIF.jpg"><img src="./Hydroline Products Pvt Ltd_files/KIF.jpg" vspace="10px" rel="" alt="Await data sheet" height="88" width="88" title="KIF" hspace="3px"></a> <a href="http://www.hydroline.com/images/filters/TIFP%2004.jpg"><img src="./Hydroline Products Pvt Ltd_files/TIFP 04.jpg" vspace="10px" rel="pdf/TIFP - 030413.pdf" alt="Tank Top - Cartridge - Click Here To View Details" hspace="3px" height="88" width="88" title="TIFP"></a> <a href="http://www.hydroline.com/images/filters/RPF.jpg"><img src="./Hydroline Products Pvt Ltd_files/RPF.jpg" vspace="10px" rel="pdf/RPF - 030413.pdf" alt="Tank Top - Cartridge - Click Here To View Details" hspace="3px" height="88" width="88" title="RPF"></a> <a href="http://www.hydroline.com/images/filters/SPF.jpg"><img src="./Hydroline Products Pvt Ltd_files/SPF.jpg" vspace="10px" rel="pdf/SPF - 030413.pdf" alt="Tank Top - Cartridge - Click Here To View Details" hspace="3px" height="88" width="88" title="SPF"></a> <a href="http://www.hydroline.com/images/filters/JFR1.jpg"><img src="./Hydroline Products Pvt Ltd_files/JFR1.jpg" vspace="10px" rel="pdf/JFR - 030413.pdf" alt="Tank Top -Cartridge - Click Here To View Details" hspace="3px" height="88" width="88" title="JFR1"></a> <a href="http://www.hydroline.com/images/filters/GR.jpg"><img src="./Hydroline Products Pvt Ltd_files/GR.jpg" vspace="10px" rel="pdf/GI - PG1 - 180412.pdf" alt="GAUGE - Click Here To View Details" hspace="3px" height="88" width="88" title=" Gauge"></a> </div></div></div></div>
+  </div>
+  <div class="mb_content" style="display: none;">
+    <h2>Filter With Breather &nbsp;&nbsp;&nbsp;&nbsp;(Please click on the image.)</h2>
+    <div class="mb_content_inner" style="overflow: hidden; padding: 0px; width: 537px;">
+      
+    <div class="jspContainer" style="width: 537px; height: 400px;"><div class="jspPane" style="padding: 0px; top: 0px; width: 537px;"><br><div id="thumbnail" class="mb_close">
+        <div style="margin-left:100px;"> <a href="http://www.hydroline.com/images/fandb/JFRB.jpg"><img src="./Hydroline Products Pvt Ltd_files/JFRB.jpg" rel="pdf/JFR1B - 030413.pdf" title="JFR1B" alt="JFR1B  - Click Here To View Details" height="110" width="110" vspace="20px" hspace="5px"></a> <a href="http://www.hydroline.com/images/fandb/RFPB.jpg"><img src="./Hydroline Products Pvt Ltd_files/RFPB.jpg" height="110" width="110" rel="pdf/RPF2-1-120417.pdf" title="RPFB" alt="RFPB  - Click Here To View Details" vspace="20px" hspace="5px"></a> </div>
+      </div></div></div></div>
+  </div>
+  <div class="mb_content" style="display: none;">
+    <h2>Breather &nbsp;&nbsp;&nbsp;&nbsp;(Please click on the image.)</h2>
+    <div class="mb_content_inner" style="overflow: hidden; padding: 0px; width: 537px;">
+      
+    <div class="jspContainer" style="width: 537px; height: 400px;"><div class="jspPane" style="padding: 0px; top: 0px; width: 537px;"><div id="thumbnail" class="mb_close"> <a href="http://www.hydroline.com/images/breather/FSB.jpg"><img vspace="20px" src="./Hydroline Products Pvt Ltd_files/FSB.jpg" height="88" width="88" title="FSB" rel="pdf/FSB-TB-130417.pdf" alt="Steel  - Click Here To View Details" hspace="35px"></a><!-- FSB-TB-120417.pdf --> <a href="http://www.hydroline.com/images/breather/TB.jpg"><img src="./Hydroline Products Pvt Ltd_files/TB.jpg" height="88" width="88" title="TB" vspace="20px" alt="TB - Click Here To View Details" rel="pdf/TB - PG 3- 250613.pdf" hspace="35px"></a> <a href="http://www.hydroline.com/images/breather/DBT.jpg"><img src="./Hydroline Products Pvt Ltd_files/DBT.jpg" vspace="20px" title="DBT" rel="pdf/DB - PG1 - 180412.pdf" height="88" width="88" alt="Pl  - Click Here To View Details" hspace="35px"></a> <br>
+        <a href="http://www.hydroline.com/images/breather/AB.jpg"><img src="./Hydroline Products Pvt Ltd_files/AB.jpg" height="88" width="88" title="AB/AB2" rel="pdf/AB2 - PG1  - 180412.pdf" alt="Spin On  - Click Here To View Details" vspace="20px" hspace="35px"></a> <a href="http://www.hydroline.com/images/breather/ABT.jpg"><img src="./Hydroline Products Pvt Ltd_files/ABT.jpg" height="88" width="88" vspace="20px" title="ABT/ABF" rel="pdf/ABT - PG1 - 180412.pdf" alt="Al  - Click Here To View Details" hspace="35px"></a> <a href="http://www.hydroline.com/images/breather/FSBA.jpg"><img src="./Hydroline Products Pvt Ltd_files/FSBA.jpg" height="88" width="88" title="FSBA" rel="pdf/FSBA-TBA - PG1 - 200412.pdf" alt="Al - Click Here To View Details" vspace="20px" hspace="35px"></a><br>
+        <a href="http://www.hydroline.com/images/breather/ABP.jpg"><img src="./Hydroline Products Pvt Ltd_files/ABP.jpg" height="88" width="88" title="ABP" rel="pdf/ABP - PG1 - 180412.pdf" vspace="20px" alt="Pl  - Click Here To View Details" hspace="35px"></a> <a href="http://www.hydroline.com/images/breather/MBF.jpg"><img src="./Hydroline Products Pvt Ltd_files/MBF.jpg" vspace="20px" height="88" width="88" title="MBF" rel="pdf/MBT - PG1 - 02AP13.pdf" alt="Pl  - Click Here To View Details" hspace="35px"></a> <a href="http://www.hydroline.com/images/breather/FSBP.jpg"><img src="./Hydroline Products Pvt Ltd_files/FSBP.jpg" vspace="20px" height="88" width="88" title="FSBP" rel="" alt="Await data sheet" hspace="35px"></a> </div></div></div></div>
+  </div>
+  <div class="mb_content" style="display: none;">
+    <h2>Strainer &nbsp;&nbsp;&nbsp;&nbsp;(Please click on the image.)</h2>
+    <div class="mb_content_inner" style="overflow: hidden; padding: 0px; width: 537px;">
+      
+    <div class="jspContainer" style="width: 537px; height: 400px;"><div class="jspPane" style="padding: 0px; top: 0px; width: 537px;"><div id="thumbnail" class="mb_close"> <a href="http://www.hydroline.com/images/strainer/SC2.jpg"><img src="./Hydroline Products Pvt Ltd_files/SC2.jpg" height="110" width="110" title="SC2" rel="pdf/SC2-PG1 - 240412.pdf" alt="In-line -Steel Nut  - Click Here To View Details" vspace="20px" hspace="5px"></a> <a href="http://www.hydroline.com/images/strainer/SC2M.jpg"><img src="./Hydroline Products Pvt Ltd_files/SC2M.jpg" alt="Await data sheet" height="110" width="110" title="SC2M" rel="" vspace="20px" hspace="5px"></a> <a href="http://www.hydroline.com/images/strainer/SC3.jpg"><img src="./Hydroline Products Pvt Ltd_files/SC3.jpg" height="110" width="110" title="SC3" rel="pdf/SC3- PG1 -240412.pdf" alt="In-line - Al Nut  - Click Here To View Details" vspace="20px" hspace="5px"></a> <a href="http://www.hydroline.com/images/strainer/SE.jpg"><img src="./Hydroline Products Pvt Ltd_files/SE(1).jpg" height="110" width="110" title="SE" rel="pdf/SE - PG1 - 240412.pdf" alt="Inline - Pl Nut  - Click Here To View Details" vspace="20px" hspace="5px"></a> <a href="http://www.hydroline.com/images/strainer/TMA.jpg"><img src="./Hydroline Products Pvt Ltd_files/TMA.jpg" height="110" width="110" title="TMA" rel="pdf/TMA - PG1 - 020512.pdf" alt="Tank Mounted - Al Nut  - Click Here To View Details" vspace="20px" hspace="5px"></a> <a href="http://www.hydroline.com/images/strainer/TMH.jpg"><img src="./Hydroline Products Pvt Ltd_files/TMH.jpg" height="110" width="110" title="TMH" rel="pdf/TMH.pdf" alt="Tank Mounted - MS Hose Barb-Click Here To View Details" vspace="20px" hspace="5px"></a> <a href="http://www.hydroline.com/images/strainer/TMS.jpg"><img src="./Hydroline Products Pvt Ltd_files/TMS.jpg" height="110" width="110" title="TMS" rel="pdf/TMS - PG1 - 020512.pdf" alt="Tank Mounted - MS Nut  - Click Here To View Details" vspace="20px" hspace="5px"></a> <a href="http://www.hydroline.com/images/strainer/TMSU.jpg"><img src="./Hydroline Products Pvt Ltd_files/TMSU.jpg" height="110" width="110" title="TMSU" rel="pdf/TMSU - PG1 - 151012.pdf" alt="Tank Mounted - MS Nut-Click Here To View Details" vspace="20px" hspace="5px"></a> </div></div></div></div>
+  </div>
+  <div class="mb_content" style="display: none;">
+    <h2>Accessories &nbsp;&nbsp;&nbsp;&nbsp;(Please click on the image.)</h2>
+    <div class="mb_content_inner" style="overflow: hidden; padding: 0px; width: 537px;">
+      
+    <div class="jspContainer" style="width: 537px; height: 400px;"><div class="jspPane" style="padding: 0px; top: 0px; width: 537px;"><div id="thumbnail" class="mb_close"> <a href="http://www.hydroline.com/images/accessories/DIFFUSERS.jpg"><img src="./Hydroline Products Pvt Ltd_files/DIFFUSERS.jpg" height="110" width="110" title="RD3" rel="pdf/RD3 - PG1 - 180412.pdf" alt="In-line-Diffuser Al Nut - Click Here To View Details" vspace="20px" hspace="5px"></a> <a href="http://www.hydroline.com/images/accessories/TMAD.jpg"><img src="./Hydroline Products Pvt Ltd_files/TMAD.jpg" title="TMAD" rel="pdf/TMAD - PG1 - 020413.pdf" alt="Tank Top-Diffuser Al Nut   - Click Here To View Details" height="110" width="110" vspace="20px" hspace="5px"></a> <a href="http://www.hydroline.com/images/accessories/TMSD.jpg"><img src="./Hydroline Products Pvt Ltd_files/TMSD.jpg" title="TMSD" rel="pdf/TMSD - PG1 -020413.pdf" alt="Tank Top-Diffuser Steel Nut   - Click Here To View Details" height="110" width="110" vspace="20px" hspace="5px"></a> <a href="http://www.hydroline.com/images/accessories/TMSUD.jpg"><img src="./Hydroline Products Pvt Ltd_files/TMSUD.jpg" title="TMSUD" rel="pdf/TMSUD-PG1-020413.pdf" alt="Tank Top-Diffuser Steel Nut - Click Here To View Details" height="110" width="110" vspace="20px" hspace="5px"></a> <a href="http://www.hydroline.com/images/accessories/MT.jpg"><img src="./Hydroline Products Pvt Ltd_files/MT.jpg" height="110" width="110" title="MT" rel="pdf/MT- PG1 - 180412.pdf" alt="Magnetic Cleaner   - Click Here To View Details" vspace="20px" hspace="5px"></a> <a href="http://www.hydroline.com/images/accessories/TWF.jpg"><img src="./Hydroline Products Pvt Ltd_files/TWF.jpg" height="110" width="110" title="TWF" rel="pdf/TWF - 030413.pdf" alt="MS / SS   - Click Here To View Details" vspace="20px" hspace="5px"></a> <a href="http://www.hydroline.com/images/accessories/SWF.jpg"><img src="./Hydroline Products Pvt Ltd_files/SWF.jpg" alt="Await data sheet" height="110" width="110" title="SWF" rel="" vspace="20px" hspace="5px"></a> <a href="http://www.hydroline.com/images/accessories/GMT.jpg"><img src="./Hydroline Products Pvt Ltd_files/GMT.jpg" title="GMT" height="110" width="110" rel="pdf/GMT - PG1 - 180412.pdf" alt="Grommet   - Click Here To View Details" vspace="20px" hspace="5px"></a> </div></div></div></div>
+  </div>
+  <div class="mb_content" style="display: none;">
+    <h2>Level Gauge &nbsp;&nbsp;&nbsp;&nbsp;(Please click on the image.)</h2>
+    <div class="mb_content_inner" style="overflow: hidden; padding: 0px; width: 537px;">
+      
+    <div class="jspContainer" style="width: 537px; height: 400px;"><div class="jspPane" style="padding: 0px; top: 0px; width: 537px;"><div id="thumbnail" class="mb_close"> <a href="http://www.hydroline.com/images/lgauge/LG2.jpg"><img src="./Hydroline Products Pvt Ltd_files/LG2.jpg" height="110" width="110" title="LG2" rel="pdf/LG2 Cat - PG1 - 010413.pdf" alt="Steel  - Click Here To View Details" vspace="20px" hspace="5px"></a> <a href="http://www.hydroline.com/images/lgauge/LG6.jpg"><img src="./Hydroline Products Pvt Ltd_files/LG6.jpg" height="110" width="110" title="LG6" rel="pdf/LG6 Cat - PG1 - 010413.pdf" alt="Al  - Click Here To View Details" vspace="20px" hspace="5px"></a> <a href="http://www.hydroline.com/images/lgauge/SGA.jpg"><img src="./Hydroline Products Pvt Ltd_files/SGA.jpg" height="110" width="110" title=" SGA/S" rel="pdf/SGS-A - PG1 - 030413.pdf" alt=" SGA/S  - Click Here To View Details" vspace="20px" hspace="5px"></a> <a href="http://www.hydroline.com/images/lgauge/SGP.jpg"><img src="./Hydroline Products Pvt Ltd_files/SGP.jpg" height="110" width="110" title="SGP" rel="pdf/SGP- PG1 - 180412.pdf" alt="Pl  - Click Here To View Details" vspace="20px" hspace="5px"></a> </div></div></div></div>
+  </div>
+  <div class="mb_content" style="display: none;">
+    <h2>Valves &nbsp;&nbsp;&nbsp;&nbsp;(Please click on the image.)</h2>
+    <div class="mb_content_inner" style="overflow: hidden; padding: 0px; width: 537px;">
+      
+    <div class="jspContainer" style="width: 537px; height: 400px;"><div class="jspPane" style="padding: 0px; top: 0px; width: 537px;"><div id="thumbnail" class="mb_close">
+        <div id="center" style="margin-left:100px;"> <a href="http://www.hydroline.com/images/valves/CUT.jpg"><img src="./Hydroline Products Pvt Ltd_files/CUT.jpg" title="CUT" rel="pdf/CUT - PG1  - 180412.pdf" height="110" width="110" vspace="20px" hspace="5px" alt="In-line - Check Valves   - Click Here To View Details"></a> <a href="http://www.hydroline.com/images/valves/VALVES.jpg"><img src="./Hydroline Products Pvt Ltd_files/VALVES.jpg" title="DLVT" rel="pdf/DLVT - PG1 - 180412.pdf" hspace="5px" height="110" width="110" vspace="20px" alt="In-line - Lock Check Valves - Click Here To View Details"></a> </div>
+      </div></div></div></div>
+  </div>
+  <div class="mb_content" style="display: none;">
+    <h2>Custom &nbsp;&nbsp;&nbsp;&nbsp;(Please click on the image.)</h2>
+    <div class="mb_content_inner" style="overflow: hidden; padding: 0px; width: 537px;">
+      
+    <div class="jspContainer" style="width: 537px; height: 400px;"><div class="jspPane" style="padding: 0px; top: 0px; width: 537px;"><div id="thumbnail" class="mb_close">
+        <div id="center" style="margin-left:100px;"> <a href="http://www.hydroline.com/images/custom/Plt_difr.jpg"><img src="./Hydroline Products Pvt Ltd_files/Plt_difr.jpg" title="Plt_difr" rel="" height="110" width="110" vspace="20px" hspace="5px" alt="Consult Factory"></a> <a href="http://www.hydroline.com/images/custom/tank_1.jpg"><img src="./Hydroline Products Pvt Ltd_files/tank_1.jpg" title="Tank 1" rel="" hspace="5px" height="110" width="110" vspace="20px" alt="Consult Factory"></a> <a href="http://www.hydroline.com/images/custom/tank_4.jpg"><img src="./Hydroline Products Pvt Ltd_files/tank_4.jpg" title="Tank 4" rel="" hspace="5px" height="110" width="110" vspace="20px" alt="Consult Factory"></a> </div>
+      </div></div></div></div>
+  </div>
+</div>
+<div id="large"></div>
+<div id="background"></div>
+<div class="mb_footer" style="font-family:Arial; text-transform:none; font-size:12px; color:#FF6600">This site is best viewed using current versions of Firefox, 
+Chrome, Safari or Microsoft Internet Explorer 9 or above at a screen resolution of 1024 x 768 or higher. <a class="mb_right" href="http://www.tecnode.com/"><span>Powererd by Tecnode</span> </a> 
+  <!-- <p> Hydroline Products Pvt Ltd &copy; 2013 |<a class="mb_left" href="#">Privacy Policy</a></p>--> 
+</div>
+<!-- The JavaScript --> 
+<script type="text/javascript" src="./Hydroline Products Pvt Ltd_files/jquery.min.js.download"></script> 
+<script type="text/javascript" src="./Hydroline Products Pvt Ltd_files/jquery.easing.1.3.js.download"></script> 
+<!-- the mousewheel plugin - optional to provide mousewheel support --> 
+<script type="text/javascript" src="./Hydroline Products Pvt Ltd_files/jquery.mousewheel.js.download"></script> 
+<!-- the jScrollPane script --> 
+<script type="text/javascript" src="./Hydroline Products Pvt Ltd_files/jquery.jscrollpane.min.js.download"></script> 
+<script type="text/javascript" src="./Hydroline Products Pvt Ltd_files/jquery.transform-0.9.3.min_.js.download"></script> 
+<script type="text/javascript" src="./Hydroline Products Pvt Ltd_files/jquery-ui.min.js.download"></script> 
+<script type="text/javascript">
+			$(function() {
+				var $menu			= $('#mb_menu'),
+				$menuItems			= $menu.children('a'),
+				$mbWrapper			= $('#mb_content_wrapper'),
+				$mbClose			= $mbWrapper.children('.mb_close'),
+				$mbContentItems		= $mbWrapper.children('.mb_content'),
+				$mbContentInnerItems= $mbContentItems.children('.mb_content_inner');
+				$mbPattern			= $('#mb_pattern'),
+				$works				= $('#mb_imagelist > li'),
+				$mb_bgimage			= $('#mb_background > img'),
+				
+				Menu		 		= (function(){
+					
+					var init		= function() {
+						preloadImages();
+						initPlugins();
+						initPattern();
+						initEventsHandler();
+					},
+					//preloads the images for the work area (data-bgimg attr)
+					preloadImages	= function() {
+						$works.each(function(i) {
+							$('<img/>').attr('src' , $(this).children('img').data('bgimg'));
+						});
+					},
+					//initialise the jScollPane (scroll plugin)
+					initPlugins		= function() {
+						$mbContentInnerItems.jScrollPane({
+							verticalDragMinHeight: 40,
+							verticalDragMaxHeight: 40
+						});
+					},
+					/*
+						draws 16 boxes on a specific area of the page.
+						we randomly calculate the top, left, and rotation angle for each one of them
+					 */
+					initPattern		= function() {
+						for(var i = 0; i < 2 ; ++i) {
+							//random opacity, top, left and angle
+							var o		= 0.1,
+							t		= Math.floor(Math.random()*196) + 5, // between 5 and 200
+							l		= Math.floor(Math.random()*696) + 5, // between 5 and 700
+							a		= Math.floor(Math.random()*101) - 50; // between -50 and 50
+									
+							$el		= $('<div>').css({
+								opacity			: o,
+								top				: t + 'px',
+								left			: l + 'px'
+							});
+								
+							if (!$.browser.msie)
+								$el.transform({'rotate'	: a + 'deg'});
+								
+							$el.appendTo($mbPattern);
+						}
+						$mbPattern.children().draggable(); //just for fun
+					},
+					/*
+						when the User closes a content item, we move the boxes back to the original place,
+						with new random values for top, left and angle though
+					 */
+					disperse 		= function() {
+						$mbPattern.children().each(function(i) {
+							//random opacity, top, left and angle
+							var o			= 0.1,
+							t			= Math.floor(Math.random()*196) + 5, // between 5 and 200
+							l			= Math.floor(Math.random()*696) + 5, // between 5 and 700
+							a			= Math.floor(Math.random()*101) - 50; // between -50 and 50
+							$el			= $(this),
+							param		= {
+								width	: '50px',
+								height	: '50px',
+								opacity	: o,
+								top		: t + 'px',
+								left	: l + 'px'
+							};
+									
+							if (!$.browser.msie)
+								param.rotate	= a + 'deg';
+									
+							$el.animate(param, 10, 'easeOutExpo');
+						});
+					},
+					initEventsHandler	= function() {
+						/*
+							click a link in the menu
+						 */
+						$('#menu li').find('a').click(function(){
+							var $this	= $(this),
+							pos		= $(this).parents("li").index(),
+							speed	= $this.data('speed'),
+							easing	= $this.data('easing');
+							if ( $(this).parents("li").children().length > 1 ) {
+								 if(pos != 2)
+								 {
+									 if(!$menu.data('open')){
+									//if current animating return
+									if($menu.data('moving')) return false;
+									$menu.data('moving', true);
+									$.when(openItem(pos, speed, easing)).done(function(){
+										$menu.data({
+											open	: true,
+											moving	: false
+										});
+										showContentItem(pos);
+										$mbPattern.children().fadeOut(500);
+									});
+								}
+								else
+									showContentItem(pos);
+								return false;
+								 }
+							}
+							else
+							{
+								$('.sub_menu').hide();
+								 if(pos != 0)
+								 {
+									//if an item is not yet shown
+									if(!$menu.data('open')){
+										//if current animating return
+										if($menu.data('moving')) return false;
+										$menu.data('moving', true);
+										$.when(openItem(pos, speed, easing)).done(function(){
+											$menu.data({
+												open	: true,
+												moving	: false
+											});
+											showContentItem(pos);
+											$mbPattern.children().fadeOut(500);
+										});
+									}
+									else
+										showContentItem(pos);
+									return false;
+								 }
+								 else
+								 {
+									 //window.location.reload();
+								 }
+							}
+				
+						});
+							
+						/*
+							click close makes the boxes animate to the top of the page
+						 */
+						$mbClose.bind('click', function(e) {
+							$('.sub_menu').hide();
+							$menu.data('open', false);
+							/*
+								if we would want to show the default image when we close:
+								changeBGImage('images/default.jpg');
+							 */
+							$mbPattern.children().fadeIn(500, function() {
+								$mbContentItems.hide();
+								$mbWrapper.hide();
+							});
+								
+							disperse();
+							return false;
+						});
+							
+								
+					},
+
+					/*
+						This shows a content item when there is already one shown:
+					 */
+					showContentItem		= function(pos) {
+						$mbContentItems.hide();
+						$mbWrapper.show();
+						$mbContentItems.eq(pos).show().children('.mb_content_inner').jScrollPane();
+					},
+					/*
+						moves the boxes from the top to the center of the page,
+						and shows the respective content item
+					 */
+					openItem			= function(pos, speed, easing) {
+						return $.Deferred(
+						function(dfd) {
+							$mbPattern.children().each(function(i) {
+								var $el			= $(this),
+								param		= {
+									width	: '430px',
+									height	: '20px',
+									//top		: 150 + 100 * Math.floor(i/4),
+									top		: 130 + 100 * Math.floor(i/4),
+									//left	: 205 + 100 * (i%4),
+									left	: 160 + 100 * (i%4),
+									opacity	: 1
+								};
+										
+								if (!$.browser.msie)
+									param.rotate	= '0deg';
+										
+								$el.animate(param, speed, easing, dfd.resolve);
+							});
+						}
+					).promise();
+					};
+						
+					return {
+						init : init
+					};
+					
+				})();
+			
+				/*
+					call the init method of Menu
+				 */
+				Menu.init();
+			});
+			$(function(){
+				$('#mb_background').hover(function(){
+					$('.sub_menu').hide();
+				});
+				$("#mb_content_wrapper").hover(function(){
+					$('.sub_menu').hide();
+				});
+			});
+		</script>
+
+
+</body></html>
