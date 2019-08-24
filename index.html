@@ -1,4 +1,4 @@
-
+li>li>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,7 +36,8 @@
 </script>
 <style>
 body {height: 100%; width: 100%; position: relative;}
-section {height: 75vh; width: 100%; clear:both;}
+section {height: auto; width: 100%; clear:both; padding-top: 35px;}
+  /* height: 75vh; */
 .container {width: 662px;}
 .marketing h2, h3 {margin:12px 0 12px 15px;}
 .spacer {padding:70px 0 0 0;}
@@ -46,7 +47,12 @@ section {height: 75vh; width: 100%; clear:both;}
 .marketing > .row > .col-lg-12 > p {text-align: left; clear:both;}
 .right p, .right h4 {text-align: right;}
 .logo {margin: 10px 0 0 0;}
-#product-2 {padding-top: 50px;}
+
+#product-1 img {width:100% !important; max-width: auto;}
+
+
+
+#product-2,#product-3,#product-4,#product-5 {padding-top: 50px;}
 #product-2 img {width:auto;}
 #product-3 img {width: 100%; overflow: hidden;}
 #footer {padding: 144px 0 0px 0;}
@@ -57,7 +63,7 @@ section {height: 75vh; width: 100%; clear:both;}
       border-top: 1px solid #e5e5e5;
 }
 .grid {margin: 0 0 3px 0; text-align: center;}
-.grid:hover {outline:1px solid #e5e5e5; }
+/* .grid:hover {outline:1px solid #e5e5e5; }*/
     /* Customize container */
     @media (max-width: 768px) {
       .container {
@@ -73,7 +79,7 @@ section {height: 75vh; width: 100%; clear:both;}
     /* Main marketing message and sign up button */
     .jumbotron {
       position: relative;
-      height:400px;
+      height:auto; /* 400 px */
       border-bottom: 1px solid #e5e5e5;
     }
     .jumbotron .btn {
@@ -170,13 +176,16 @@ section {height: 75vh; width: 100%; clear:both;}
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a class="page-scroll" href="#top">Home</a></li>
-        <li><a class="page-scroll" href="#about">About Us</a></li>
+        <li><a class="page-scroll" href="#services">Services</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Products<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a class="page-scroll" href="#product-1">High Force Tools</a></li>
-            <li><a class="page-scroll" href="#product-2">Fluid Power</a></li>
-            <li><a class="page-scroll" href="#product-3">Fluid Conveying</a></li>
+            <li><a class="page-scroll" href="#product-1">Fluid Power</a></li>
+            <li><a class="page-scroll" href="#product-2">Fluid Conveyance</a></li>
+            <li><a class="page-scroll" href="#product-3">High Pressure Hydraulic</a></li>
+            <li><a class="page-scroll" href="#product-4">High Force Tool</a></li>
+            <li><a class="page-scroll" href="#product-5">Filter & Tank Accessories</a></li>
+
           </ul>
         </li>
         <li><a href="#footer" class="page-scroll">Contact</a></li>
@@ -192,126 +201,143 @@ section {height: 75vh; width: 100%; clear:both;}
           <div class="jumbotron">
         <h1>Passion + Excellence</h1>
         <p class="lead">Paxel Engineering provide sales and services for hydraulic-related products. </p>
-        <p><a class="btn btn-lg btn-success page-scroll" href="#about" role="button">Find out more</a></p>
+        <p><a class="btn btn-lg btn-success page-scroll" href="#services" role="button">Find out more</a></p>
       </div>
+      <p>Paxel Engineering Pte Ltd was incorporated in 2013. Our main focus is on hydraulic products and services.
+      We always emphasise on excellence service, quality product & competitive price. We supply to
+      marine & shipbuilding, construction, manufacturing, mobile industries, etc.</p>
     </section>
 
-      <section id="about" class="marketing">
-          <h1>About Us</h1>
-          <div class="row">
-          <div class="col-lg-12">
-          <p>We specialise in providing the following services: fluiding conveying, high force tools and fluid power</p>
-        </div>
-        <div class="col-lg-6">
-          <h4> iHP Tool</h4>
-          <p>The brand was set up in 1995. Our experience in the industries stretched way back to the early 70s. Our main business is to source and supply industrial equipments to the construction, shipbuilding, oil explorations, mining,
-            manufacturing and general industries.</p>
-
-<p>iHP Tools products have gained the trust and confidence of our valued customers, to provide more than just comprehensive and reliable equipments. We hold the highest aspect for SAFETY to our valued customers.</p>
-        </div>
-
-        <div class="col-lg-6">
-
-          <h4>Brevini</h4>
-          <p>Brevini Fluid Power is a leading manufacturer of hydraulic components in Italy and Europe. The headquarters are in Reggio Emilia, with direct subsidiaries in Europe, China, India, Singapore and USA. This network ensures a global presence of our seven product lines</p>
-        </div>
-        </div>
-      </section>
-
-
-      <!-- products-->
+    <section id="services" class="marketing">
+          <h1>Services</h1>
+            <div class="row">
+              <div class="col-lg-12">
+                  <p>We provide the following services:</p>
+                    <ul>
+                      <li>Fabricate & commission of hydraulic power unit</li>
+                      <li>Trobuleshoot and repair of hydraulic system</li>
+                      <li>Design, install & commission of hydraulic system</li>
+                      <li>Provide equipment & labour for flushing of hydraulic system</li>
+                      <li>Rental of hydraulic power unit</li>
+                  </ul>
+              </div>
+            </div>
+  </section>
 
 
           <section id="product-1" class="marketing">
               <h1>Product</h1>
-
                   <div class="row">
-    <h3>High Force Tool</h3>
+                    <h3>Fluid Power</h3>
+                      <div class="col-lg-12">
+                        <p> <h4>Pump</h4>
+                  <div class="col-sm-4 col-xs-6 grid"><img src="./products/fluid-power/axial-piston-pump-fixed-displacement.jpg"><p>Axial Piston Pump<br />Fixed Displacement</p></div>
+                  <div class="col-sm-4 col-xs-6 grid"><img src="./products/fluid-power/axial-piston-pump-variable displacement.jpg"><p>Axial Piston Pump<br />Variable Displacement</p></div>
+                  <div class="col-sm-4 col-xs-6 grid"><img src="./products/fluid-power/gear-pump.png"><p>Gear Pump</p></div>
+              </p>
+              <p> <h4>Motor</h4>
+                  <div class="col-sm-3 col-xs-6 grid"><img src="./products/fluid-power/axial-motor-fixed-displacement.jpg"><p>Axial Motor <br />Fixed Displacement</p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><img src="./products/fluid-power/axial-motor-variable-displacement.jpg"><p>Axial Motor<br />Variable Displacement<p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><img src="./products/fluid-power/gear-motor.png"><p>Gear Motor</p></div>
+                  <div class="col-sm-3 col-xs-6 grid"><img src="./products/fluid-power/orbital-motor.jpg"><p>Orbital Motor</p></div>
+              </p>
 
-            <div class="col-lg-12">
+              <p> <h4>Directional Control Valve</h4>
+                  <div class="col-sm-4 col-xs-6 grid"><img src="./products/fluid-power/manual-control.jpg"><p>Manual Control</p></div>
+                  <div class="col-sm-4 col-xs-6 grid"><img src="./products/fluid-power/solenoid-control.jpg"><p>Solenoid Control</p></div>
+              </p>
 
-              <p> <h4>Cylinder</h4>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/SGT.htm"><img src="http://paxel.sg/products/SGT.gif"></a><p>SGT Single Action</p></div>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/SFJ.htm"><img src="http://paxel.sg/products/SFJ.gif"> </a><p>SFJ/SLC Low height</p></div>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/SHC.htm"><img src="http://paxel.sg/products/SHC.gif"> </a><p>SHC Hollow Plunger</p></div>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/DPC.htm"><img src="http://paxel.sg/products/DPC.gif"></a> <p>DPC Double Action</p></div>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/DHC.htm"><img src="http://paxel.sg/products/DHC.gif"></a> <p>DHC Double Acting Hollow Plunger</p></div>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/DCC.htm"><img src="http://paxel.sg/products/DCC.gif"> </a><p>DCC Double Acting High Tonnage</p></div>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/SCC.htm"><img src="http://paxel.sg/products/SCC.gif"> </a><p>SCC Single Action High Tonnage</p></div>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/SLL.htm"><img src="http://paxel.sg/products/SLL.gif"></a> <p>SLL High Tonnage, Locknut</p></div>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/SCP.htm"><img src="http://paxel.sg/products/SCP.gif"></a> <p>SCP Pancake Locknut</p></div>
+              <p> <h4>Cartrige Valve</h4>
+                  <div class="col-sm-4 col-xs-6 grid"><img src="./products/fluid-power/pressure-relief.jpg"><p>Pressure Relief</p></div>
+                  <div class="col-sm-4 col-xs-6 grid"><img src="./products/fluid-power/check-valve.jpg"><p>Check Valve</p></div>
+                  <div class="col-sm-4 col-xs-6 grid"><img src="./products/fluid-power/flow-control.jpg"><p>Flow Control</p></div>
               </p>
 
 
 
-              <p> <h4>Pump</h4>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/PA.htm"><img src="http://paxel.sg/products/HAND.gif"> </a><p>SCC Single Action High Tonnage</p></div>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://paxel.sg/products/electric_pump.jpeg"><img src="http://paxel.sg/products/BATTERY.gif"></a> <p>SLL High Tonnage, Locknut</p></div>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/ASS.htm"><img src="http://paxel.sg/products/ASS.gif"></a> <p>SCP Pancake Locknut</p></div>
-              </p>
-              <p> <h4>Pusher</h4>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/puller-1.htm"><img src="http://paxel.sg/products/puller-1.gif"> </a><p>SCC Single Action High Tonnage</p></div>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/puller-2.htm"><img src="http://paxel.sg/products/puller-2.gif"></a> <p>SLL High Tonnage, Locknut</p></div>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/puller-3.htm"><img src="http://paxel.sg/products/puller-3.gif"></a> <p>SCP Pancake Locknut</p></div>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/puller-4.htm"><img src="http://paxel.sg/products/puller-4.gif"> </a><p>SCC Single Action High Tonnage</p></div>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/puller-5.htm"><img src="http://paxel.sg/products/puller-5.gif"></a> <p>SLL High Tonnage, Locknut</p></div>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/puller-6.htm"><img src="http://paxel.sg/products/puller-6.gif"></a> <p>SCP Pancake Locknut</p></div>
-              </p>
-              <p> <h4>Pusher</h4>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/mxta.htm"><img src="http://ihp-tools.com/images/mxta.h1.jpg"> </a><p>SCC Single Action High Tonnage</p></div>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/xlct.htm"><img src="http://ihp-tools.com/images/wrench2.jpg"></a> <p>SLL High Tonnage, Locknut</p></div>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/twpe.htm"><img src="http://ihp-tools.com/images/Electric%20Pump%20copy.gif"></a> <p>SCP Pancake Locknut</p></div>
-                  <div class="col-sm-3 col-xs-6 grid"><a target="_blank" href="http://ihp-tools.com/twin-h.htm"><img src="http://ihp-tools.com/images/200852601855.jpg"> </a><p>SCC Single Action High Tonnage</p></div>
-              </p>
+
             </div>
           </div>
 
           <div id="product-2" class="row">
-            <h3>Fluid Power</h3>
-            <div class="col-sm-4 right"><h4>CETOP Valve</h4>
-            <p>Flow from 20l/min to 600l/min and pressure from 250 bar to 320 bar</p>
-            </div>
-            <div class="col-sm-8"><img class="thumbnail" src="http://paxel.sg/products/cetop.jpg"></div>
-            <div class="col-sm-4 right"><h4>Axial Piston Pump</h4>
-            <p>Pumps range from 6cc to 226cc for maximum pressure<br /> of up to 480 bar
-Suitable for mobile and industrial applications with swashplate and bent axis design</p>
-            </div>
-            <div class="col-sm-8"><img class="thumbnail" src="http://paxel.sg/products/pistonpump.jpg"></div>
-            <div class="col-sm-4 right"><h4>Orbit Motor</h4>
-            <p>Flow from 13cc to 400cc Speed from 153rpm to 1550rpm Torque from 94Nm to 1600Nm</p>
-            </div>
-            <div class="col-sm-8"><img class="thumbnail" src="http://paxel.sg/products/orbitalmotor.jpg"></div>
-            <div class="col-sm-4 right"><h4>Proportional Valve</h4>
-            <p>With inlet flow rate up to 380l/minute and maximum pressure of 400 bar</p>
-            </div>
-            <div class="col-sm-8"><img class="thumbnail" src="http://paxel.sg/products/proportion-valve.jpg"></div>
-            <div class="col-sm-4 right"><h4>Gear Pump</h4>
-            <p>Group 1: from 0,70 to 9,9 cc/rev
-Group 2: from 4,10 to 30 cc/rev
-Group 3: from 22 to 60 cc/rev</p>
-            </div>
-            <div class="col-sm-8"><img class="thumbnail" src="http://paxel.sg/products/gearpump.jpeg"></div>
+            <h3>Fluid Conveyance</h3>
+            <div class="col-lg-12">
+
+            <p>
+                <div class="col-sm-3 col-xs-6 grid"><img src="./products/fluid-conveyance/hydraulic-hose.jpg"><p>Hydraulic Hose</p></div>
+                <div class="col-sm-3 col-xs-6 grid"><img src="./products/fluid-conveyance/fitting.jpg"><p>Fitting</p></div>
+                <div class="col-sm-3 col-xs-6 grid"><img src="./products/fluid-conveyance/adaptor.jpg"><p>Adaptor</p></div>
+                <div class="col-sm-3 col-xs-6 grid"><img src="./products/fluid-conveyance/seamless-tube.jpg"><p>Seamless Tube</p></div>
+                <div class="col-sm-3 col-xs-6 grid"><img src="./products/fluid-conveyance/pvc.jpg"><p>PVC Tube Clamp</p></div>
+                <div class="col-sm-3 col-xs-6 grid"><img src="./products/fluid-conveyance/quick-coupling.jpg"><p>Quick Coupling</p></div>
+                <div class="col-sm-3 col-xs-6 grid"><img src="./products/fluid-conveyance/pressure-gauge.jpg"><p>Pressure Gauge</p></div>
+                <div class="col-sm-3 col-xs-6 grid"><img src="./products/fluid-conveyance/test-coupling.jpg"><p>Test Coupling</p></div>
+                <div class="col-sm-3 col-xs-6 grid"><img src="./products/fluid-conveyance/ball-valve.jpg"><p>Ball Valve</p></div>
+                <div class="col-sm-3 col-xs-6 grid"><img src="./products/fluid-conveyance/flow-control-valve.jpg"><p>Flow Control Valve</p></div>
+                <div class="col-sm-3 col-xs-6 grid"><img src="./products/fluid-conveyance/needle-valve.jpg"><p>Needle Valve</p></div>
+                <div class="col-sm-3 col-xs-6 grid"><img src="./products/fluid-conveyance/check-valve.jpg"><p>Check Valve</p></div>
+          </p>
+
+          </div>
+
+  </div>
+  <div id="product-3" class="row">
+    <h3>High Pressure Hydraulic</h3>
+    <div class="col-lg-12">
+
+    <p>
+      <div class="col-sm-4 col-xs-6 grid"><img src="./products/high-pressure-hydraulic/hose.png"><p>UHP Hose</p></div>
+      <div class="col-sm-4 col-xs-6 grid"><img src="./products/high-pressure-hydraulic/component.png"><p>UHP Component</p></div>
+
+    </p>
 
   </div>
 
-  <div id="product-3" class="row">
-    <h3>Fluid Conveying</h3>
-    <div class="col-sm-4 col-xs-6">
-      <h4>Hydraulic Hoses</h4>
-        <img class="thumbnail" src="http://paxel.sg/products/hose.jpg">
-    <p>Flow from 20l/min to 600l/min and pressure from 250 bar to 320 bar</p>
-    </div>
-    <div class="col-sm-4 col-xs-6">
-      <h4>Fitting</h4>
-        <img class="thumbnail" src="http://paxel.sg/products/fitting.jpg">
-    <p>Flow from 20l/min to 600l/min and pressure from 250 bar to 320 bar</p>
-    </div>
-    <div class="col-sm-4 col-xs-6">
-      <h4>Adapter</h4>
-        <img class="thumbnail" src="http://paxel.sg/products/adapter.jpg">
-    <p>Pipe, Tube and Lok Type Steel & Stainless Steel</p>
-    </div>
 </div>
+
+<div id="product-4" class="row">
+  <h3>High Force Tool</h3>
+  <div class="col-lg-12">
+
+  <p> <h4>Motor</h4>
+      <div class="col-sm-3 col-xs-6 grid"><img src="./products/high-force-tool/hand-pump.png"><p>Hand Pump</p></div>
+      <div class="col-sm-3 col-xs-6 grid"><img src="./products/high-force-tool/electric-pump.png"><p>Electric Pump</p></div>
+  </p>
+  <p><h4>Cylinder</h4>
+      <div class="col-sm-3 col-xs-6 grid"><img src="./products/high-force-tool/general.png"><p>General</p></div>
+      <div class="col-sm-3 col-xs-6 grid"><img src="./products/high-force-tool/short.png"><p>Short</p></div>
+      <div class="col-sm-3 col-xs-6 grid"><img src="./products/high-force-tool/hollow.png"><p>Hollow</p></div>
+</p>
+<p><h4>Accessories</h4>
+      <div class="col-sm-3 col-xs-6 grid"><img src="./products/high-force-tool/hose.png"><p>Hose</p></div>
+      <div class="col-sm-3 col-xs-6 grid"><img src="./products/high-force-tool/coupler.png"><p>Coupler</p></div>
+      <div class="col-sm-3 col-xs-6 grid"><img src="./products/high-force-tool/manifold.png"><p>Manifold</p></div>
+</p>
+</div>
+
+</div>
+
+
+<div id="product-5" class="row">
+  <h3>Filter & Tank Accessories</h3>
+  <div class="col-lg-12">
+
+    <p>
+        <div class="col-sm-3 col-xs-6 grid"><img src="./products/filter/FSB.jpg"><p>Breather</p></div>
+        <div class="col-sm-3 col-xs-6 grid"><img src="./products/filter/IFR3.jpg"><p>Inline Filter</p></div>
+        <div class="col-sm-3 col-xs-6 grid"><img src="./products/filter/TIF2.jpg"><p>Tank Mount Filter</p></div>
+
+        <div class="col-sm-3 col-xs-6 grid"><img src="./products/filter/SC3.jpg"><p>Strainer</p></div>
+        <div class="col-sm-3 col-xs-6 grid"><img src="./products/filter/LG2.jpg"><p>Level Gauge</p></div>
+        <div class="col-sm-3 col-xs-6 grid"><img src="./products/filter/GR.jpg"><p>Clogging Gauge</p></div>
+
+  </p>
+
+
+</div>
+
+</div>
+
 
           </section>
 <section id="footer" class="marketing">
@@ -321,18 +347,23 @@ Group 3: from 22 to 60 cc/rev</p>
 
 <div class="col-xs-6">
   <p>Paxel Engineering Pte Ltd<br />
-  545 Orchard Road #03-35<br />
-  Far East Shopping Centre<br />
-  Singapore 238882<br />
+  2022 Bt Batok St 23<br />
+  #01-136<br />
+  Singapore 659527<br />
+  </p>
+
+  <p>Mailing Address:<br />
+  Toa Payoh North Post Office<br />
+  PO Box 859<br />
+  Singapore 913136
   </p>
 
 </div>
 
 <div class="col-xs-6">
 
-  <p>For enquiry and quotation<br />
-   Tel: +65 63560878<br />
-    Fax: +65 67585990<br />
+  <p>For enquiry and quotation:<br />
+   Mobile: +65 9239 0448<br />
   Email: john@paxel.sg</p>
 </div>
 </div>
@@ -342,8 +373,5 @@ Group 3: from 22 to 60 cc/rev</p>
 </div>
     </div> <!-- /container -->
 
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
